@@ -23,12 +23,19 @@
 
    //app config for default routing//
    mainApp.config(['$urlRouterProvider','$httpProvider','$locationProvider',function ($urlRouterProvider,$httpProvider,$locationProvider) {
-      // $locationProvider.hashPrefix('');
+
+      $locationProvider.hashPrefix('');
+
        $urlRouterProvider.otherwise('/myLogin');
        $httpProvider.interceptors.push('testInterceptor');
        
 
  }])
+     mainApp.config(['$compileProvider', function($compileProvider) {
+            //configure routeProvider as usual
+            $compileProvider.debugInfoEnabled(false);
+        }])
+
 })();
 //---------------------******* Intercepting the api calls to perform diffreent actions ********------------------------//
   function testInterceptor($location) {
