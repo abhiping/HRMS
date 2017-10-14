@@ -1,0 +1,143 @@
+<div class="wrapper"  id="commoncontent">
+ <header class="main-header">
+  <!-- Logo -->
+  <a ui-sref="mydashboard" href="#"" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini">
+      <img src="img/small-logo.png" class="img-responsive"></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">
+        <img src="img/logo-in.png" class="img-responsive"></span> </a>
+        <!-- Header Navbar -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="" class="sidebar-toggle" data-toggle="offcanvas" role="button"><span class="sr-only">Toggle navigation</span> </a>
+          <!-- Navbar Right Menu -->
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li class="dropdown user user-menu">
+                <!-- Menu Toggle Button -->
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+
+                  <!-- The user image in the navbar-->
+                  <img src="img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <!-- hidden-xs hides the username on small devices so only the image appears. -->
+
+                  <span class="hidden-xs">{{name}}</span> </a>
+                  <ul class="dropdown-menu">
+                    <!-- The user image in the menu -->
+                    <li class="user-header">
+                      <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      <p><small>Email: {{email}}</small> </p>
+                    </li>
+                    <!-- Menu Body -->
+                    <!-- Menu Footer-->
+                    <li class="user-footer">
+                 <!--      <div class="pull-left"><a href="my-account.php" class="btn btn-default btn-flat">Edit Profile</a>
+                        <a href="my-account.php#settings" class="btn btn-default btn-flat" data-toggle="tab">Change Password</a>
+                      </div> -->
+                      <div style="text-align:center;"><a href="" class="btn btn-default btn-flat" ng-click="signOut()">Sign out</a> </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+          <!-- sidebar: style can be found in sidebar.less -->
+          <section class="sidebar" id="scrollSide">
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel">
+              <div class="pull-left image">
+                <img src="img/user2-160x160.jpg" class="img-circle" alt="User Image">
+              </div>
+              <div class="pull-left info">
+                <p>{{name}}</p>
+                <!-- Status -->
+                <a href="" style="text-transform: uppercase;">{{r}} </a>
+              </div>
+            </div>
+            <!-- Sidebar Menu -->
+            <ul class="sidebar-menu" ng-show ="r == 'admin'">
+
+              <!-- Optionally, you can add icons to the links -->
+              <li class="active"><a ui-sref="app.mydashboard" href="#"><i class="fa fa-cogs"></i><span>Poject List</span></a></li>
+                <!--  <li ><a href="parking.php"><i class="fa fa-car" aria-hidden="true"></i>
+                <span>Manage Parking</span></a></li> -->
+                <li><a ui-sref="app.gotobroker" href="#"><i class="fa fa-users"></i><span>Manage Brokers</span></a></li>
+                <li><a href="" ui-sref="app.gotobrkrclient"><i class="fa fa-users" aria-hidden="true"></i>
+                  <span>Manage Clients</span></a></li>
+                  <li><a ui-sref="app.gotooffer" href="#"><i class="fa fa-file-text-o"></i><span>Manage Offers</span></a></li>
+                  <li><a ui-sref="app.gotosalespersn" href="#"><i class="fa fa-male" aria-hidden="true"></i>
+                    <span>Manage Sales Person</span></a></li>
+                    <li><a ui-sref="app.gotoBank" href="#"><i class="fa fa fa-bank" aria-hidden="true"></i>
+                      <span>Manage Banks </span></a></li>
+                      <li><a ui-sref="app.gotoFundSources" href="#"><i class="fa fa-cog" aria-hidden="true"></i>
+                        <span>Manage Fund Sources</span></a></li>
+                        <li><a ui-sref="app.gototransaction" href="#"><i class="fa fa-credit-card" aria-hidden="true"></i>
+                          <span>Manage Transaction</span></a></li>
+                          <li><a ui-sref="app.gotocosttype" href="#"><i class="fa fa-exchange" aria-hidden="true"></i>
+                            <span>Manage Cost Types</span></a></li>
+                            <li><a ui-sref="app.gototaxes" href="#"><i class="fa fa-money" aria-hidden="true"></i>
+                              <span>Manage Taxes</span></a></li>
+
+                              <li><a ui-sref="app.gotoHBReport" href="#"><i class="fa fa-area-chart" aria-hidden="true"></i>
+                                <span>Booking Report</span></a></li>
+                                <li class="treeview"><a  href=""><i class="fa fa-pie-chart" aria-hidden="true"></i>
+                                  <span>Collection Report</span>
+                                  <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                  </span>
+                                </a>
+
+                                <ul class="treeview-menu">
+                                  <li><a href="" ui-sref="app.gototReport"><i class="fa fa-angle-right" aria-hidden="true"></i> <i class="fa fa-edit" aria-hidden="true"></i> Project Level</a></li>
+                                  <li><a href="" ui-sref="app.gotoCollectionBldg"><i class="fa fa-angle-right" aria-hidden="true"></i> <i class="fa fa-edit" aria-hidden="true"></i> Building Level</a></li>
+
+
+                                </ul>
+                              </li>
+                              <li class="treeview"><a  href=""><i class="fa fa-line-chart" aria-hidden="true"></i>
+                                <span>Status Report</span>
+                                <span class="pull-right-container">
+                                  <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                              </a>
+
+                              <ul class="treeview-menu">
+                                <li><a href="" ui-sref="app.gotoProjectStatus"> <i class="fa fa-angle-right" aria-hidden="true"> </i><i class="fa fa-edit" aria-hidden="true"></i> Project Level</a></li>
+                                <li><a href="" ui-sref="app.gotoBuildingStatus"><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-edit" aria-hidden="true"></i> Building Level</a></li>
+                                <li><a href="" ui-sref="app.gotoConfigStatus"> <i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-edit" aria-hidden="true"></i> Configuration Level</a></li>
+                                
+
+
+                              </ul>
+                            </li>
+                        <!--   
+                              <li><a ui-sref="app.gotoclientDashboard" href="#"><i class="fa fa-money" aria-hidden="true"></i>
+                              <span>Client Panel</span></a></li> -->
+                              </ul>
+                               <ul class="sidebar-menu" ng-show ="r == 'broker'">
+                                 <li><a ui-sref="app.gotobrokerDashboard" href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                              <span>Update My Profile</span></a></li>
+                               <li><a ui-sref="app.brokerDetails" href="#"><i class="fa fa-book" aria-hidden="true"></i>
+                              <span>View Bookings</span></a></li>
+                               </ul>
+                                <ul class="sidebar-menu" ng-show ="r == 'client'">
+                                <li><a ui-sref="app.gotoclientDashboard" href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                              <span>My Profile Details</span></a></li>
+                               <li><a ui-sref="app.gotoClientBooking" href="#"><i class="fa fa-book" aria-hidden="true"></i>
+                              <span>Booking Details</span></a></li>
+                                <li><a ui-sref="app.gotoClientPayment" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                              <span>Payment Details</span></a></li>
+                               </ul>
+                              <!-- /.sidebar-menu -->
+                            </section>
+                            <!-- /.sidebar -->
+                          </aside>
+                          <!-- Main Header -->
+                          <div ui-view>
+                          </div>
+                        </div>  

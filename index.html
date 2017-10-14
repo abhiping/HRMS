@@ -26,9 +26,9 @@
 
 
  <script src="bower_components/jquery/dist/jquery.min.js"></script>
- <script src="bower_components/bootstrap/dist/bootstrap.min.js"></script>
+ <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
  <script src="bower_components/angular/angular.min.js"></script>
- <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+ <script src="scripts/angular-animate.min.js"></script>
  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
  <script src="bower_components/angular-material/angular-material.js"></script>
  <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
@@ -43,48 +43,33 @@
  <script src="bower_components/angular-datatables/demo/src/archives/dist/angular-datatables.min.js"></script>
  <script src="scripts/angular-datatables.bootstrap.min.js"></script>
  <script src="scripts/dataTables.lightColumnFilter.min.js"></script>
- <script src="/home/b/hrms/bower_components/angular-datatables/demo/src/archives/dist/plugins/light-columnfilter/angular-datatables.light-columnfilter.min.js"></script>
+ <script src="bower_components/angular-datatables/demo/src/archives/dist/plugins/light-columnfilter/angular-datatables.light-columnfilter.min.js"></script>
 
 
 
- <script src="scripts/loading-bar.js"></script>
+ <script src="scripts/loading-bar.min.js"></script>
  <script src="scripts/angular-locale_en-in.js"></script>
- <script src="scripts/lodash.min.js"></script>
+<!--  <script src="scripts/lodash.min.js"></script> -->
  <script src="scripts/sweetalert2.min.js"></script>
- <script src="scripts/moment.js"></script>
- <script src="scripts/jquery.slimscroll.js"></script>
+<!--  <script src="scripts/moment.js"></script> -->
+    <script src="scripts/jquery.slimscroll.min.js"></script>
  <script src="scripts/adminLTEapp.js"></script>
 
-<!-- <script src="app.js"></script>
-<script src="Config/commonconfig.js"></script>
-<script src="Config/commonService.js"></script>
-<script src="Config/commonRoutingService.js"></script>
-<script src="Config/master.js"></script>
-<script src="Config/directives.js"></script>
-<script src="Config/filters.js"></script>
-<script src="Login/module.js"></script>
-<script src="Login/loginService.js"></script>
-<script src="Login/login.js"></script>
-<script src="Login/dashboard.js"></script> -->
-
-
+<script src="app.js"></script>
+<script src="contollers/config.js"></script>
+<script src="contollers/module.js"></script>
+<script src="contollers/commonservice.js"></script>
+<script src="contollers/master.js"></script>
+<script src="contollers/loginservice.js"></script>
+<script src="contollers/login.js"></script>
+<script src="contollers/dashboard.js"></script>
 <script>
 
   $(document).on('click', '.sidebar-menu li', function() {
    $(".sidebar-menu li").removeClass("active");
    $(this).addClass("active");
  });
-  $(document).ready(function(){
-    $('#scrollDiv').slimScroll({
-      height: 'auto'
-    });
 
-    $(window).resize(function(){
-      var h=$(window).height()-20;
-      $('#scrollDiv').height(h);
-      $('.slimScrollDiv').height(h);
-    });
-  });
 
 </script>
 </body>

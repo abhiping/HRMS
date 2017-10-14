@@ -1,0 +1,57 @@
+
+  
+    <!-- Content Wrapper. Contains page content -->
+<div class="wrapper">
+    <div class="content-wrapper">
+        <ol class="breadcrumb">
+            <li><a ui-sref="app.mydashboard" href="#"><i class="fa fa-dashboard"></i>Home </a></li>
+            <li class="active">Dashboard</li>
+        </ol>
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+             <button type="button" class="btn btn-primary" ng-click="gotoProjectAdd()">Add Project</button>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+            
+            <div class="row">
+                <div class="box-body">
+                    <div>
+                        <table class="table no-margin table-bordered" dataTable="ng" dt-options="dtOptions">
+                            <thead>
+                                <tr>
+                                    <th>Project Name</th>
+                                     <th>Description</th>
+                                    <th>Update</th>
+                                    <th>Delete</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr ng-repeat="p in projectList">
+                                    <td><a ui-sref="app.gotoProject({projectId:p.id})" href="#">{{p.name}}</a></td>
+                                    <td>{{p.description}}</td>
+                                    <td><a href="" data-toggle="modal" ui-sref="app.gotoEditProject({projectId:p.id})"><span class="label label-warning"><i class="fa fa-pencil" aria-hidden="true"></i>
+                                  Update </span></a></td>
+                                     <td><a href="" data-toggle="modal" ng-click="gotodeleteProject(p.id)"><span class="label label-danger"><i class="fa fa-times" aria-hidden="true"></i>
+                                  Delete </span></a></td>
+                                        <div class="sparkbar" data-color="#00a65a" data-height="20">
+                                            <canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                                                        <div id="ajaxLoader" style="text-align:center"><img src="img/ajax-loader.gif" style="height:35px;" /></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+    
+
