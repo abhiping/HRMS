@@ -1,13 +1,21 @@
-<div class="login-box" id="content">
-    <div class="login-logo">
-        <a href="#">
-           <!--  <img src="img/logo.png"></a> -->
+
+<div style="background: url(css/login-bg.jpg) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;">
+<div class="login-box" id="content" >
+    <div class="login-logo" >
+       <img src="css/logo.png">
     </div>
     <!-- /.login-logo -->
-    <div class="login-box-body">
-        <p class="login-box-msg" style=" text-transform: uppercase;">Login</p>
+    <div class="login-box-body">  
+        <p class="login-box-msg" style=" text-transform: uppercase;">HRMS | Login</p>
 
-        <form name="loginForm" novalidate data-ng-submit="validate(loginForm.$valid)" autocomplete="off">
+        <form name="loginForm" novalidate data-ng-submit="validateLogin(loginForm.$valid)" autocomplete="off">
             <div class="form-group has-feedback" data-ng-class="{
                                           'has-error' : loginForm.loginId.$invalid && (!loginForm.loginId.$pristine || showValid) && !loginForm.loginId.$focus,
                                           'has-success': loginForm.loginId.$valid && !loginForm.loginId.$pristine && !loginForm.loginId.$focus
@@ -19,7 +27,8 @@
                     placeholder="Email"
                     data-ng-model="emailId"
                     ng-pattern="/^[a-zA-Z\s]+[a-zA-Z\s0-9._-]+@[a-zA-Z\sa-z0-9-]+\.[a-zA-Z\s.]{2,20}$/"
-                    required />
+                    required
+                     />
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 <div ng-messages="loginForm.loginId.$error" style="color: maroon" role="alert">
                     <div ng-message="required" data-ng-if="loginForm.loginId.$invalid && (!loginForm.loginId.$pristine || showValid) && !loginForm.loginId.$focus">This field is mandatory</div>
@@ -45,16 +54,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-8">
+       <!--          <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
                             <input type="checkbox">&nbsp; Remember Me
                         </label>
                     </div>
-                </div>
+                </div> -->
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="button" class="btn btn-primary btn-block btn-flat" ng-click="validate()">Login</button>
+                    <button type="submit" class="btn bg-orange btn-flat ladda-button" adda="loadingDemo" data-style="expand-right">Login</button>
                 </div>
                 <!-- /.col -->
             </div>
@@ -63,7 +72,8 @@
 
         <!-- /.social-auth-links -->
 
-        <a data-toggle="modal" data-target="#resetpass" style="cursor: pointer;">I forgot my password</a><br>
+      <!--   <a data-toggle="modal" data-target="#resetpass" style="cursor: pointer;">I forgot my password</a><br> -->
     </div>
     <!-- /.login-box-body -->
+</div>
 </div>

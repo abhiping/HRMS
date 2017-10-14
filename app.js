@@ -4,6 +4,8 @@
  var mainApp = angular.module('mainApp', [
   'ngRoute',
   'ui.router',
+  // 'ui.bootstrap',
+  'ui.bootstrap.tpls',
   'ngCookies',
   'ngMessages',
   'angular-loading-bar',
@@ -11,7 +13,7 @@
   'ngAnimate',
   'ngMaterial',
   'datatables',
-  'datatables.light-columnfilter',
+  // 'datatables.light-columnfilter',
   'datatables.bootstrap',
   'Config',
   'guestlogin',
