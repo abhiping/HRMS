@@ -1,0 +1,11 @@
+{
+  "name": "humanresourcemanagementsystem",
+  "version": "1.0.0",
+  "description": "system to manage resources",
+  "main": "app.js",
+  "scripts": {
+    "test": "testing"
+  },
+  "author": "Abhishek Pingle",
+  "license": "ISC"
+}

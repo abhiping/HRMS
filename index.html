@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en" ng-app="mainApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title ng-bind="title">HRMS | ERP Tool</title>
+  <meta name="google" content="">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="css/AdminLTE.min.css" rel="stylesheet" />
+  <link href="css/skin-blue.css" rel="stylesheet" />
+  <link href="css/custom.css" rel="stylesheet" />
+  <link href="css/sweetalert2.min.css" rel="stylesheet" />
+  <link href="css/loading-bar.min.css" rel="stylesheet" media="all" />
+  <link href="css/dataTables.tableTools.min.css" rel="stylesheet"  >
+  <link href="bower_components/ladda/dist/ladda-themeless.min.css" rel="stylesheet" />
+  <link href="bower_components/angular-material/angular-material.css" rel="stylesheet" />
+
+</head>
+<body class="hold-transition skin-blue  fixed sidebar-mini">
+ <div ui-view>
+ </div>
+
+
+ <script src="bower_components/jquery/dist/jquery.min.js"></script>
+ <script src="bower_components/bootstrap/dist/bootstrap.min.js"></script>
+ <script src="bower_components/angular/angular.min.js"></script>
+ <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+ <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+ <script src="bower_components/angular-material/angular-material.js"></script>
+ <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+ <script src="bower_components/angular-loader/angular-loader.min.js"></script>
+ <script src="bower_components/angular-message-format/angular-message-format.min.js"></script>
+ <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+ <script src="bower_components/angular-route/angular-route.min.js"></script>
+ <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+ <script src="bower_components/ladda/dist/ladda.min.js"></script>
+ <script src="bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
+ <script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+ <script src="bower_components/angular-datatables/demo/src/archives/dist/angular-datatables.min.js"></script>
+ <script src="scripts/angular-datatables.bootstrap.min.js"></script>
+ <script src="scripts/dataTables.lightColumnFilter.min.js"></script>
+ <script src="/home/b/hrms/bower_components/angular-datatables/demo/src/archives/dist/plugins/light-columnfilter/angular-datatables.light-columnfilter.min.js"></script>
+
+
+
+ <script src="scripts/loading-bar.js"></script>
+ <script src="scripts/angular-locale_en-in.js"></script>
+ <script src="scripts/lodash.min.js"></script>
+ <script src="scripts/sweetalert2.min.js"></script>
+ <script src="scripts/moment.js"></script>
+ <script src="scripts/jquery.slimscroll.js"></script>
+ <script src="scripts/adminLTEapp.js"></script>
+
+<!-- <script src="app.js"></script>
+<script src="Config/commonconfig.js"></script>
+<script src="Config/commonService.js"></script>
+<script src="Config/commonRoutingService.js"></script>
+<script src="Config/master.js"></script>
+<script src="Config/directives.js"></script>
+<script src="Config/filters.js"></script>
+<script src="Login/module.js"></script>
+<script src="Login/loginService.js"></script>
+<script src="Login/login.js"></script>
+<script src="Login/dashboard.js"></script> -->
+
+
+<script>
+
+  $(document).on('click', '.sidebar-menu li', function() {
+   $(".sidebar-menu li").removeClass("active");
+   $(this).addClass("active");
+ });
+  $(document).ready(function(){
+    $('#scrollDiv').slimScroll({
+      height: 'auto'
+    });
+
+    $(window).resize(function(){
+      var h=$(window).height()-20;
+      $('#scrollDiv').height(h);
+      $('.slimScrollDiv').height(h);
+    });
+  });
+
+</script>
+</body>
+</html>
